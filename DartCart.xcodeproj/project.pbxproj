@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A340E221FE42F2500942A7F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A340E211FE42F2500942A7F /* CoreData.framework */; };
+		3A340E2B1FE437AE00942A7F /* ListsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A340E2A1FE437AE00942A7F /* ListsTVC.m */; };
+		3A340E2E1FE437C000942A7F /* ShoppingListTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A340E2D1FE437C000942A7F /* ShoppingListTVC.m */; };
+		3A340E311FE437DF00942A7F /* CategoriesTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A340E301FE437DF00942A7F /* CategoriesTVC.m */; };
+		3A340E341FE437FD00942A7F /* MasterListTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A340E331FE437FD00942A7F /* MasterListTVC.m */; };
+		3A379E781FE43ABC00D9E41F /* maestro.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A379E771FE43ABC00D9E41F /* maestro.m */; };
+		3A379E7B1FE4474500D9E41F /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A379E7A1FE4474500D9E41F /* EditViewController.m */; };
 		3A4560BC1FE4227F007C04F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4560BB1FE4227F007C04F5 /* AppDelegate.m */; };
-		3A4560BF1FE4227F007C04F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4560BE1FE4227F007C04F5 /* ViewController.m */; };
 		3A4560C21FE4227F007C04F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4560C01FE4227F007C04F5 /* Main.storyboard */; };
 		3A4560C51FE4227F007C04F5 /* DartCart.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3A4560C31FE4227F007C04F5 /* DartCart.xcdatamodeld */; };
 		3A4560C71FE4227F007C04F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A4560C61FE4227F007C04F5 /* Assets.xcassets */; };
@@ -17,11 +23,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A340E211FE42F2500942A7F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3A340E291FE437AE00942A7F /* ListsTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListsTVC.h; sourceTree = "<group>"; };
+		3A340E2A1FE437AE00942A7F /* ListsTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListsTVC.m; sourceTree = "<group>"; };
+		3A340E2C1FE437C000942A7F /* ShoppingListTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingListTVC.h; sourceTree = "<group>"; };
+		3A340E2D1FE437C000942A7F /* ShoppingListTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShoppingListTVC.m; sourceTree = "<group>"; };
+		3A340E2F1FE437DF00942A7F /* CategoriesTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoriesTVC.h; sourceTree = "<group>"; };
+		3A340E301FE437DF00942A7F /* CategoriesTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoriesTVC.m; sourceTree = "<group>"; };
+		3A340E321FE437FD00942A7F /* MasterListTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterListTVC.h; sourceTree = "<group>"; };
+		3A340E331FE437FD00942A7F /* MasterListTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterListTVC.m; sourceTree = "<group>"; };
+		3A379E761FE43ABC00D9E41F /* maestro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = maestro.h; sourceTree = "<group>"; };
+		3A379E771FE43ABC00D9E41F /* maestro.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = maestro.m; sourceTree = "<group>"; };
+		3A379E791FE4474500D9E41F /* EditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		3A379E7A1FE4474500D9E41F /* EditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 		3A4560B71FE4227F007C04F5 /* DartCart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DartCart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4560BA1FE4227F007C04F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3A4560BB1FE4227F007C04F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3A4560BD1FE4227F007C04F5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3A4560BE1FE4227F007C04F5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3A4560C11FE4227F007C04F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A4560C41FE4227F007C04F5 /* DartCart.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DartCart.xcdatamodel; sourceTree = "<group>"; };
 		3A4560C61FE4227F007C04F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -35,17 +52,65 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A340E221FE42F2500942A7F /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A340E201FE42F2500942A7F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A340E211FE42F2500942A7F /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3A340E231FE4366C00942A7F /* ShoppingLists */ = {
+			isa = PBXGroup;
+			children = (
+				3A340E291FE437AE00942A7F /* ListsTVC.h */,
+				3A340E2A1FE437AE00942A7F /* ListsTVC.m */,
+				3A340E2C1FE437C000942A7F /* ShoppingListTVC.h */,
+				3A340E2D1FE437C000942A7F /* ShoppingListTVC.m */,
+			);
+			path = ShoppingLists;
+			sourceTree = "<group>";
+		};
+		3A340E241FE4368200942A7F /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				3A340E2F1FE437DF00942A7F /* CategoriesTVC.h */,
+				3A340E301FE437DF00942A7F /* CategoriesTVC.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		3A340E251FE4368E00942A7F /* MasterList */ = {
+			isa = PBXGroup;
+			children = (
+				3A340E321FE437FD00942A7F /* MasterListTVC.h */,
+				3A340E331FE437FD00942A7F /* MasterListTVC.m */,
+			);
+			path = MasterList;
+			sourceTree = "<group>";
+		};
+		3A379E751FE43A4800D9E41F /* SubClasses */ = {
+			isa = PBXGroup;
+			children = (
+				3A379E761FE43ABC00D9E41F /* maestro.h */,
+				3A379E771FE43ABC00D9E41F /* maestro.m */,
+			);
+			path = SubClasses;
+			sourceTree = "<group>";
+		};
 		3A4560AE1FE4227F007C04F5 = {
 			isa = PBXGroup;
 			children = (
 				3A4560B91FE4227F007C04F5 /* DartCart */,
 				3A4560B81FE4227F007C04F5 /* Products */,
+				3A340E201FE42F2500942A7F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,11 +125,15 @@
 		3A4560B91FE4227F007C04F5 /* DartCart */ = {
 			isa = PBXGroup;
 			children = (
+				3A379E751FE43A4800D9E41F /* SubClasses */,
+				3A340E251FE4368E00942A7F /* MasterList */,
+				3A340E241FE4368200942A7F /* Categories */,
+				3A340E231FE4366C00942A7F /* ShoppingLists */,
 				3A4560BA1FE4227F007C04F5 /* AppDelegate.h */,
 				3A4560BB1FE4227F007C04F5 /* AppDelegate.m */,
-				3A4560BD1FE4227F007C04F5 /* ViewController.h */,
-				3A4560BE1FE4227F007C04F5 /* ViewController.m */,
 				3A4560C01FE4227F007C04F5 /* Main.storyboard */,
+				3A379E791FE4474500D9E41F /* EditViewController.h */,
+				3A379E7A1FE4474500D9E41F /* EditViewController.m */,
 				3A4560C61FE4227F007C04F5 /* Assets.xcassets */,
 				3A4560C81FE4227F007C04F5 /* LaunchScreen.storyboard */,
 				3A4560CB1FE4227F007C04F5 /* Info.plist */,
@@ -145,10 +214,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A4560BF1FE4227F007C04F5 /* ViewController.m in Sources */,
+				3A340E341FE437FD00942A7F /* MasterListTVC.m in Sources */,
+				3A379E7B1FE4474500D9E41F /* EditViewController.m in Sources */,
 				3A4560BC1FE4227F007C04F5 /* AppDelegate.m in Sources */,
+				3A340E2B1FE437AE00942A7F /* ListsTVC.m in Sources */,
 				3A4560CD1FE4227F007C04F5 /* main.m in Sources */,
+				3A340E311FE437DF00942A7F /* CategoriesTVC.m in Sources */,
+				3A340E2E1FE437C000942A7F /* ShoppingListTVC.m in Sources */,
 				3A4560C51FE4227F007C04F5 /* DartCart.xcdatamodeld in Sources */,
+				3A379E781FE43ABC00D9E41F /* maestro.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

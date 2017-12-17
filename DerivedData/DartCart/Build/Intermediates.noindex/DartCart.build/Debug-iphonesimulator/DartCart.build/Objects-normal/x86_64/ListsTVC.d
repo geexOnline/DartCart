@@ -1,0 +1,7 @@
+dependencies: \
+  /Users/guruspeaker/Documents/COP\ 2658/171215/DartCart/DartCart/ShoppingLists/ListsTVC.m \
+  /Users/guruspeaker/Documents/COP\ 2658/171215/DartCart/DartCart/ShoppingLists/ListsTVC.h \
+  /Users/guruspeaker/Documents/COP\ 2658/171215/DartCart/DartCart/AppDelegate.h \
+  /Users/guruspeaker/Documents/COP\ 2658/171215/DartCart/DartCart/SubClasses/maestro.h \
+  /Users/guruspeaker/Documents/COP\ 2658/171215/DartCart/DartCart/EditViewController.h \
+  /Users/guruspeaker/Documents/COP\ 2658/171215/DartCart/DartCart/ShoppingLists/ShoppingListTVC.h
