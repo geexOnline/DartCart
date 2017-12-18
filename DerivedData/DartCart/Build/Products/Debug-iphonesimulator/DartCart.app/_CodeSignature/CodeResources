@@ -10,7 +10,7 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		tLViCaLrvDupR2P7nlvVS9FOYYo=
+		SkW3MEvA9ntmE7FS/5nuXYg3PEw=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		RKUWpoe2miYXTLXgxtfk+Dy7r20=
+		2IkplAK5kd0GqFSz9g0hM1Z3uYs=
 		</data>
 		<key>Base.lproj/Main.storyboardc/8Py-gw-0Vr-view-4eu-ov-CJn.nib</key>
 		<data>
@@ -80,13 +80,9 @@
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
 		</data>
-		<key>category sm.png</key>
+		<key>category.png</key>
 		<data>
-		PJx3xg3LqGVzc+U9l3cQZXdrwME=
-		</data>
-		<key>category_list.png</key>
-		<data>
-		6le3kBT0Dg3Q82CFUaIaEmvkGUc=
+		dRYtSGHVagvH6d/gkegy+r7aEJA=
 		</data>
 		<key>dartCart.png</key>
 		<data>
@@ -96,6 +92,15 @@
 		<data>
 		4s3QyRMiTdVqxDxhlH6wes1sFQo=
 		</data>
+		<key>en.lproj/LaunchScreen.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rMPCZm8bS+DEm+22K95Rcnhx0zk=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>if_shopping_cart_44666 SM.png</key>
 		<data>
 		p1xM4lIYLGhzn+MSQDrrmp4QftY=
@@ -122,11 +127,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tLViCaLrvDupR2P7nlvVS9FOYYo=
+			SkW3MEvA9ntmE7FS/5nuXYg3PEw=
 			</data>
 			<key>hash2</key>
 			<data>
-			jLVtVJAvkgAhD64KM3sSdNomlME3Tf7KNXsQp2XlohY=
+			Fv5tBFSWQbFrTkzIK9N8yNBkacaLUrrzrQ4wlfE1KSY=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
@@ -144,11 +149,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			RKUWpoe2miYXTLXgxtfk+Dy7r20=
+			2IkplAK5kd0GqFSz9g0hM1Z3uYs=
 			</data>
 			<key>hash2</key>
 			<data>
-			jt+qaWGBvMGoyJvlVBbCOq0DmLN/PVdAuK//g13jb6U=
+			Ta7fCLdjmpC2c2MzEEg14m1o0XqNnfxHjs8GG2ci5rM=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/8Py-gw-0Vr-view-4eu-ov-CJn.nib</key>
@@ -294,26 +299,15 @@
 			x58Qbbm2AGta9tZFd8zmqX2jHm5DEZKnt8k9InhP2eo=
 			</data>
 		</dict>
-		<key>category sm.png</key>
+		<key>category.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			PJx3xg3LqGVzc+U9l3cQZXdrwME=
+			dRYtSGHVagvH6d/gkegy+r7aEJA=
 			</data>
 			<key>hash2</key>
 			<data>
-			OrJth91qb8UJNI5BH+ssvAGF/JhB5iwcflxEKRY4eN0=
-			</data>
-		</dict>
-		<key>category_list.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			6le3kBT0Dg3Q82CFUaIaEmvkGUc=
-			</data>
-			<key>hash2</key>
-			<data>
-			rdxFS+lIpZSbMKLXKL5GYKc7tFrpFMG1DAH5Am5kRvw=
+			38LYJkUAaoiUldQ03pEVZMsP/iWWjoHnpnZ5r3CAlak=
 			</data>
 		</dict>
 		<key>dartCart.png</key>
@@ -337,6 +331,19 @@
 			<data>
 			zeClffW53CEVeM0lnIjLCcQQCYwyzB+E1nDpBmsf08g=
 			</data>
+		</dict>
+		<key>en.lproj/LaunchScreen.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rMPCZm8bS+DEm+22K95Rcnhx0zk=
+			</data>
+			<key>hash2</key>
+			<data>
+			jtT0DOqKyv1U5SLga+DE6IqppENKUKrDdfmzJl9bcvQ=
+			</data>
+			<key>optional</key>
+			<true/>
 		</dict>
 		<key>if_shopping_cart_44666 SM.png</key>
 		<dict>
