@@ -321,7 +321,7 @@
         <scene sceneID="zc0-pF-05b">
             <objects>
                 <navigationController title="Shopping List Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="58B-K5-r6F" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Lists" image="dartCart.png" id="r5Y-aX-QdE"/>
+                    <tabBarItem key="tabBarItem" title="Lists" image="icon_DC_sm.png" id="r5Y-aX-QdE"/>
                     <toolbarItems>
                         <barButtonItem title="Item" id="iZU-Bf-RT9"/>
                     </toolbarItems>
@@ -371,7 +371,7 @@
         <scene sceneID="W7c-sK-Pbn">
             <objects>
                 <navigationController title="Categories Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="Msp-z0-NNM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Categories" image="category_list.png" id="q82-Vd-i49"/>
+                    <tabBarItem key="tabBarItem" title="Categories" image="icon_Categories_SM.png" id="q82-Vd-i49"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EFM-AF-Cds">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -391,7 +391,7 @@
         <scene sceneID="qrx-kE-fes">
             <objects>
                 <navigationController title="MasterList Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="8Gt-2s-XpS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Master List" image="category sm.png" id="WW2-Yd-eNR"/>
+                    <tabBarItem key="tabBarItem" title="Master List" image="icon_MasterLis_SM.png" id="WW2-Yd-eNR"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7gN-pu-ldd">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -409,12 +409,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="category sm.png" width="30" height="30"/>
-        <image name="category_list.png" width="30" height="30"/>
-        <image name="dartCart.png" width="30" height="30"/>
+        <image name="icon_Categories_SM.png" width="30" height="30"/>
+        <image name="icon_DC_sm.png" width="30" height="30"/>
+        <image name="icon_MasterLis_SM.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Wqd-gh-PzZ"/>
-        <segue reference="Qnd-k6-hXG"/>
+        <segue reference="GcT-hJ-ABZ"/>
+        <segue reference="i3i-aZ-QbG"/>
     </inferredMetricsTieBreakers>
 </document>

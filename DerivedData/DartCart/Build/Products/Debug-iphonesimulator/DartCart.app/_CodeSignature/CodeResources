@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		XnsgC6Ac0CKpIh48sV69qchUikk=
+		UeEYE4lj2sP8LcYi+wXQ7Nv/aeU=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		SkW3MEvA9ntmE7FS/5nuXYg3PEw=
+		HnXxQQqncYf6t6c5PbrZSevHXUY=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -18,47 +18,47 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		2IkplAK5kd0GqFSz9g0hM1Z3uYs=
+		16/MYSMlaNUItsqNGiR878w+s38=
 		</data>
 		<key>Base.lproj/Main.storyboardc/8Py-gw-0Vr-view-4eu-ov-CJn.nib</key>
 		<data>
-		NwToY31aRwPTJNQfQXfe3WTDuSU=
+		ATUqEjcly2BNiJQ6alF+yvyj4Rc=
 		</data>
 		<key>Base.lproj/Main.storyboardc/92L-WY-pj9-view-6iw-Rp-L28.nib</key>
 		<data>
-		FMXqkPJRkB4qo0MGJbvC0ldLs6M=
+		UgEhLzAsqM2/9xLFHWgNBlZzXGs=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		X0u2r2L+/CItH6SWvHDHjduIoR8=
+		oTh6SoIqx4x2OIsrFHJ/g5UgEDE=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UITabBarController-h3e-Ob-ZDT.nib</key>
 		<data>
-		B28sF1vT7B82/KvC7V+Egpu5WiQ=
+		5KzGDMKsVCY+EOovSAnCJcT5NT0=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UITableViewController-8Py-gw-0Vr.nib</key>
 		<data>
-		TRGNlT043HR0cq5JpUvH9g19G0c=
+		tFUHFxDLLwJojNI+1xVu5v4EJgs=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UITableViewController-92L-WY-pj9.nib</key>
 		<data>
-		53DesA8DX4uy49lB2zvqEKuiNIs=
+		wIez+Y7xbdZl+8uNspFQmJvxe90=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-ZZA-rP-n1Y.nib</key>
 		<data>
-		GmaNLCrzKa0Fw5xIpuGqVJ0R2iI=
+		rkLzOj6Ap0CfbVtkti5xRWk4ni0=
 		</data>
 		<key>Base.lproj/Main.storyboardc/ZDd-xR-Vng-view-r1B-BS-MEF.nib</key>
 		<data>
-		x0JO79o9dSfGoG4RrU3n2SiaA4M=
+		OpcWbOdbSMr8w8mYGa2X0Io1ZRQ=
 		</data>
 		<key>Base.lproj/Main.storyboardc/ZZA-rP-n1Y-view-unl-qr-9Jk.nib</key>
 		<data>
-		AxQqd1T2KnwgMtrZV6hgsYutnfo=
+		vAGGKiY3jxF+ouso/WrC5oI1m2k=
 		</data>
 		<key>Base.lproj/Main.storyboardc/mvO-1j-0Jl-view-b9M-vk-lQb.nib</key>
 		<data>
-		0q/1qodDH0BQw/oshNS3IA55xDg=
+		w7L6sqQPFqoXwkmQbUqNC+HKduY=
 		</data>
 		<key>DartCart.momd/DartCart.mom</key>
 		<data>
@@ -80,18 +80,6 @@
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
 		</data>
-		<key>category.png</key>
-		<data>
-		dRYtSGHVagvH6d/gkegy+r7aEJA=
-		</data>
-		<key>dartCart.png</key>
-		<data>
-		s8dy63LOW1QPn3sug7j9BbKP7gU=
-		</data>
-		<key>dartCartsm.png</key>
-		<data>
-		4s3QyRMiTdVqxDxhlH6wes1sFQo=
-		</data>
 		<key>en.lproj/LaunchScreen.strings</key>
 		<dict>
 			<key>hash</key>
@@ -101,13 +89,37 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>if_shopping_cart_44666 SM.png</key>
+		<key>icon_Categories.png</key>
+		<data>
+		nAvMGNquSHfXQvO3eeGPtASxD/8=
+		</data>
+		<key>icon_Categories_SM.png</key>
+		<data>
+		6le3kBT0Dg3Q82CFUaIaEmvkGUc=
+		</data>
+		<key>icon_DC_Fancy_LG.png</key>
+		<data>
+		mc2E4gmFyYEehAJr330vZEkekUw=
+		</data>
+		<key>icon_DC_Fancy_SM.png</key>
 		<data>
 		p1xM4lIYLGhzn+MSQDrrmp4QftY=
 		</data>
-		<key>if_shopping_cart_44666.png</key>
+		<key>icon_DC_LG.png</key>
 		<data>
-		mc2E4gmFyYEehAJr330vZEkekUw=
+		4s3QyRMiTdVqxDxhlH6wes1sFQo=
+		</data>
+		<key>icon_DC_sm.png</key>
+		<data>
+		s8dy63LOW1QPn3sug7j9BbKP7gU=
+		</data>
+		<key>icon_MasterLis_SM.png</key>
+		<data>
+		PJx3xg3LqGVzc+U9l3cQZXdrwME=
+		</data>
+		<key>icon_MasterList.png</key>
+		<data>
+		dRYtSGHVagvH6d/gkegy+r7aEJA=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -116,22 +128,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XnsgC6Ac0CKpIh48sV69qchUikk=
+			UeEYE4lj2sP8LcYi+wXQ7Nv/aeU=
 			</data>
 			<key>hash2</key>
 			<data>
-			jFzepFQLV5XrH3ZZosz8+pEfWLCCQROJVKPSBOAheaE=
+			ZY0LTqoXxiSajPmfNVRnWF1nTrQlS4wni+cYWfD2Nw8=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SkW3MEvA9ntmE7FS/5nuXYg3PEw=
+			HnXxQQqncYf6t6c5PbrZSevHXUY=
 			</data>
 			<key>hash2</key>
 			<data>
-			Fv5tBFSWQbFrTkzIK9N8yNBkacaLUrrzrQ4wlfE1KSY=
+			pg4gv0SzNG+k4cN+lVMKt9tz7FsjTXtpDW18d3/P8v8=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
@@ -149,121 +161,121 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2IkplAK5kd0GqFSz9g0hM1Z3uYs=
+			16/MYSMlaNUItsqNGiR878w+s38=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ta7fCLdjmpC2c2MzEEg14m1o0XqNnfxHjs8GG2ci5rM=
+			6MgzWw2VrLOZ2m5k4cGSblLdQsRINtcOKbkRKzyiwaY=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/8Py-gw-0Vr-view-4eu-ov-CJn.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NwToY31aRwPTJNQfQXfe3WTDuSU=
+			ATUqEjcly2BNiJQ6alF+yvyj4Rc=
 			</data>
 			<key>hash2</key>
 			<data>
-			Nur0iHmxAUz1ex13htj3HVjmagNCrUHL6tOl+0yf0Ks=
+			9LRmdmK8PgYsNlA961S4uCH2AkbdJjN+kMmvYvBpVfY=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/92L-WY-pj9-view-6iw-Rp-L28.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			FMXqkPJRkB4qo0MGJbvC0ldLs6M=
+			UgEhLzAsqM2/9xLFHWgNBlZzXGs=
 			</data>
 			<key>hash2</key>
 			<data>
-			q/Zfdjkd9+WtE5DPm69WSYScOrP2lFX/xJtaJym0URY=
+			nYLpDKN9VN4fqB9smxrkb0niMLdCvJoZ0KGu+oMVGuw=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			X0u2r2L+/CItH6SWvHDHjduIoR8=
+			oTh6SoIqx4x2OIsrFHJ/g5UgEDE=
 			</data>
 			<key>hash2</key>
 			<data>
-			6nc+i17zUb0Ey4eAX8GFYraLADQvJ0Xy1gVjNyBG5ls=
+			5RZJUkLmhOSjbIB2uV0zF30rBuq3k0B2cAKSkoWOWD4=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UITabBarController-h3e-Ob-ZDT.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			B28sF1vT7B82/KvC7V+Egpu5WiQ=
+			5KzGDMKsVCY+EOovSAnCJcT5NT0=
 			</data>
 			<key>hash2</key>
 			<data>
-			7w1qfguKjEWGVkPGpGsyBGCKA6x6oUrRekBA7MEeMzE=
+			OnBx9G01kdsmAjzHCuhFJNz5x8j08JgC+dNMDHPTiyg=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UITableViewController-8Py-gw-0Vr.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			TRGNlT043HR0cq5JpUvH9g19G0c=
+			tFUHFxDLLwJojNI+1xVu5v4EJgs=
 			</data>
 			<key>hash2</key>
 			<data>
-			cvBWK5wYG4emppfQvdIz8EZUBoYrUA9RlMd/6z7OYQw=
+			Q32gt23kJ28AwT3BiTGUHGnEqE3lSWusXOlO8ThlVYQ=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UITableViewController-92L-WY-pj9.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			53DesA8DX4uy49lB2zvqEKuiNIs=
+			wIez+Y7xbdZl+8uNspFQmJvxe90=
 			</data>
 			<key>hash2</key>
 			<data>
-			BdQvkhEI1bEM+DEUy49B5yt5yoyBnBVvl3x6gxkVrBY=
+			Qrz1BZ8riz9qLxugiOWSLS3Kgj4LVXOYvOnGZnef0/g=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UIViewController-ZZA-rP-n1Y.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GmaNLCrzKa0Fw5xIpuGqVJ0R2iI=
+			rkLzOj6Ap0CfbVtkti5xRWk4ni0=
 			</data>
 			<key>hash2</key>
 			<data>
-			4K6zKSC5L5QhxzV52A4BcXYQBiArgaWxbuaUGp7+26Q=
+			bkLiKc9OOoF0V4s88Gwn8Manc5gElmm+TudBQ1T5fPg=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/ZDd-xR-Vng-view-r1B-BS-MEF.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			x0JO79o9dSfGoG4RrU3n2SiaA4M=
+			OpcWbOdbSMr8w8mYGa2X0Io1ZRQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			QyQjD+NNjXt+zps//WJEi/JM3rjN9IRIiSHr/AtYv7Y=
+			g+qblfjMKa078XYtOWmwjULuC7BCr/EXpgkfQV2+4d8=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/ZZA-rP-n1Y-view-unl-qr-9Jk.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			AxQqd1T2KnwgMtrZV6hgsYutnfo=
+			vAGGKiY3jxF+ouso/WrC5oI1m2k=
 			</data>
 			<key>hash2</key>
 			<data>
-			ewrXMhZCQLZ6+N4TPKw3MZ+G9ThWqafmctwBQCUDArQ=
+			UoYK8XUuwp2DIOpPMlyFUTKTcbLL2wFNUjCTL2NYTIE=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/mvO-1j-0Jl-view-b9M-vk-lQb.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0q/1qodDH0BQw/oshNS3IA55xDg=
+			w7L6sqQPFqoXwkmQbUqNC+HKduY=
 			</data>
 			<key>hash2</key>
 			<data>
-			P8ITlIIIYskBdPCbHDX/SrRtpqE82yTR6Z8efz0RceA=
+			HmMf2SlwLvGb687KC7eFLabY6XEDbZ5Ta4MElFbzWLY=
 			</data>
 		</dict>
 		<key>DartCart.momd/DartCart.mom</key>
@@ -299,39 +311,6 @@
 			x58Qbbm2AGta9tZFd8zmqX2jHm5DEZKnt8k9InhP2eo=
 			</data>
 		</dict>
-		<key>category.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			dRYtSGHVagvH6d/gkegy+r7aEJA=
-			</data>
-			<key>hash2</key>
-			<data>
-			38LYJkUAaoiUldQ03pEVZMsP/iWWjoHnpnZ5r3CAlak=
-			</data>
-		</dict>
-		<key>dartCart.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			s8dy63LOW1QPn3sug7j9BbKP7gU=
-			</data>
-			<key>hash2</key>
-			<data>
-			LegPVa8scz2RSlynqqg/y1e3R3ExsNON/w4Ph+AR5Rg=
-			</data>
-		</dict>
-		<key>dartCartsm.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			4s3QyRMiTdVqxDxhlH6wes1sFQo=
-			</data>
-			<key>hash2</key>
-			<data>
-			zeClffW53CEVeM0lnIjLCcQQCYwyzB+E1nDpBmsf08g=
-			</data>
-		</dict>
 		<key>en.lproj/LaunchScreen.strings</key>
 		<dict>
 			<key>hash</key>
@@ -345,7 +324,40 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>if_shopping_cart_44666 SM.png</key>
+		<key>icon_Categories.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			nAvMGNquSHfXQvO3eeGPtASxD/8=
+			</data>
+			<key>hash2</key>
+			<data>
+			4QCzG0zVh+e8/bn97TWy34ImK2ghPcB5oochs1qYRSo=
+			</data>
+		</dict>
+		<key>icon_Categories_SM.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6le3kBT0Dg3Q82CFUaIaEmvkGUc=
+			</data>
+			<key>hash2</key>
+			<data>
+			rdxFS+lIpZSbMKLXKL5GYKc7tFrpFMG1DAH5Am5kRvw=
+			</data>
+		</dict>
+		<key>icon_DC_Fancy_LG.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			mc2E4gmFyYEehAJr330vZEkekUw=
+			</data>
+			<key>hash2</key>
+			<data>
+			ffIGafba9OIhFdzFeP6whgPIKyw6Fk58m6gHRXjiaMc=
+			</data>
+		</dict>
+		<key>icon_DC_Fancy_SM.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
@@ -356,15 +368,48 @@
 			8KDrlY4I1YTH6A6mItodzFnLL3PpgCTnxvfvkbATL4w=
 			</data>
 		</dict>
-		<key>if_shopping_cart_44666.png</key>
+		<key>icon_DC_LG.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mc2E4gmFyYEehAJr330vZEkekUw=
+			4s3QyRMiTdVqxDxhlH6wes1sFQo=
 			</data>
 			<key>hash2</key>
 			<data>
-			ffIGafba9OIhFdzFeP6whgPIKyw6Fk58m6gHRXjiaMc=
+			zeClffW53CEVeM0lnIjLCcQQCYwyzB+E1nDpBmsf08g=
+			</data>
+		</dict>
+		<key>icon_DC_sm.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			s8dy63LOW1QPn3sug7j9BbKP7gU=
+			</data>
+			<key>hash2</key>
+			<data>
+			LegPVa8scz2RSlynqqg/y1e3R3ExsNON/w4Ph+AR5Rg=
+			</data>
+		</dict>
+		<key>icon_MasterLis_SM.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			PJx3xg3LqGVzc+U9l3cQZXdrwME=
+			</data>
+			<key>hash2</key>
+			<data>
+			OrJth91qb8UJNI5BH+ssvAGF/JhB5iwcflxEKRY4eN0=
+			</data>
+		</dict>
+		<key>icon_MasterList.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dRYtSGHVagvH6d/gkegy+r7aEJA=
+			</data>
+			<key>hash2</key>
+			<data>
+			38LYJkUAaoiUldQ03pEVZMsP/iWWjoHnpnZ5r3CAlak=
 			</data>
 		</dict>
 	</dict>
