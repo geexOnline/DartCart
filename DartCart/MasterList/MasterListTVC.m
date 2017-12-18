@@ -29,7 +29,19 @@
     appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     context = appDelegate.persistentContainer.viewContext;
     NSLog(@"Incoming List: %@",_relatedList);
-
+        if (!_relatedList)
+        {
+        
+        }
+    else
+    {
+        NSString *alertBoxText = [[NSString alloc]init];
+        alertBoxText = [NSString stringWithFormat:@"Add Items to %@",_relatedList];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:alertBoxText message:@"Click on the item to add it to your list" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"I got it!" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}];
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
 
     
     
