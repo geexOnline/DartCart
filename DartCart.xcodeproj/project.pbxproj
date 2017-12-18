@@ -20,6 +20,13 @@
 		3A4560C71FE4227F007C04F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A4560C61FE4227F007C04F5 /* Assets.xcassets */; };
 		3A4560CA1FE4227F007C04F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4560C81FE4227F007C04F5 /* LaunchScreen.storyboard */; };
 		3A4560CD1FE4227F007C04F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4560CC1FE4227F007C04F5 /* main.m */; };
+		3A92A9E61FE7F50100F9F921 /* ListsTVCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A92A9E51FE7F50100F9F921 /* ListsTVCCell.m */; };
+		3A92A9E81FE8109800F9F921 /* dartCart.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A92A9E71FE8109700F9F921 /* dartCart.png */; };
+		3A92A9EA1FE8118100F9F921 /* dartCartsm.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A92A9E91FE8118000F9F921 /* dartCartsm.png */; };
+		3A92A9EC1FE813B300F9F921 /* category sm.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A92A9EB1FE813B300F9F921 /* category sm.png */; };
+		3A92A9EE1FE8144B00F9F921 /* category_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A92A9ED1FE8144B00F9F921 /* category_list.png */; };
+		3A92A9F11FE8205E00F9F921 /* if_shopping_cart_44666 SM.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A92A9EF1FE8205D00F9F921 /* if_shopping_cart_44666 SM.png */; };
+		3A92A9F21FE8205E00F9F921 /* if_shopping_cart_44666.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A92A9F01FE8205D00F9F921 /* if_shopping_cart_44666.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +52,14 @@
 		3A4560C91FE4227F007C04F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A4560CB1FE4227F007C04F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A4560CC1FE4227F007C04F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3A92A9E41FE7F50100F9F921 /* ListsTVCCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListsTVCCell.h; sourceTree = "<group>"; };
+		3A92A9E51FE7F50100F9F921 /* ListsTVCCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListsTVCCell.m; sourceTree = "<group>"; };
+		3A92A9E71FE8109700F9F921 /* dartCart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dartCart.png; path = ../../../../../Desktop/dartCart.png; sourceTree = "<group>"; };
+		3A92A9E91FE8118000F9F921 /* dartCartsm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dartCartsm.png; path = ../../../../../Desktop/dartCartsm.png; sourceTree = "<group>"; };
+		3A92A9EB1FE813B300F9F921 /* category sm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "category sm.png"; path = "../../../../../Desktop/category sm.png"; sourceTree = "<group>"; };
+		3A92A9ED1FE8144B00F9F921 /* category_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = category_list.png; path = ../../../../../Desktop/category_list.png; sourceTree = "<group>"; };
+		3A92A9EF1FE8205D00F9F921 /* if_shopping_cart_44666 SM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "if_shopping_cart_44666 SM.png"; path = "../../../../../Downloads/if_shopping_cart_44666 SM.png"; sourceTree = "<group>"; };
+		3A92A9F01FE8205D00F9F921 /* if_shopping_cart_44666.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = if_shopping_cart_44666.png; path = ../../../../../Downloads/if_shopping_cart_44666.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +87,8 @@
 			children = (
 				3A340E291FE437AE00942A7F /* ListsTVC.h */,
 				3A340E2A1FE437AE00942A7F /* ListsTVC.m */,
+				3A92A9E41FE7F50100F9F921 /* ListsTVCCell.h */,
+				3A92A9E51FE7F50100F9F921 /* ListsTVCCell.m */,
 				3A340E2C1FE437C000942A7F /* ShoppingListTVC.h */,
 				3A340E2D1FE437C000942A7F /* ShoppingListTVC.m */,
 			);
@@ -132,10 +149,16 @@
 				3A4560BA1FE4227F007C04F5 /* AppDelegate.h */,
 				3A4560BB1FE4227F007C04F5 /* AppDelegate.m */,
 				3A4560C01FE4227F007C04F5 /* Main.storyboard */,
+				3A92A9ED1FE8144B00F9F921 /* category_list.png */,
+				3A92A9EB1FE813B300F9F921 /* category sm.png */,
+				3A92A9E71FE8109700F9F921 /* dartCart.png */,
+				3A92A9E91FE8118000F9F921 /* dartCartsm.png */,
 				3A379E791FE4474500D9E41F /* EditViewController.h */,
 				3A379E7A1FE4474500D9E41F /* EditViewController.m */,
 				3A4560C61FE4227F007C04F5 /* Assets.xcassets */,
 				3A4560C81FE4227F007C04F5 /* LaunchScreen.storyboard */,
+				3A92A9EF1FE8205D00F9F921 /* if_shopping_cart_44666 SM.png */,
+				3A92A9F01FE8205D00F9F921 /* if_shopping_cart_44666.png */,
 				3A4560CB1FE4227F007C04F5 /* Info.plist */,
 				3A4560CC1FE4227F007C04F5 /* main.m */,
 				3A4560C31FE4227F007C04F5 /* DartCart.xcdatamodeld */,
@@ -201,7 +224,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A92A9F11FE8205E00F9F921 /* if_shopping_cart_44666 SM.png in Resources */,
+				3A92A9EC1FE813B300F9F921 /* category sm.png in Resources */,
+				3A92A9F21FE8205E00F9F921 /* if_shopping_cart_44666.png in Resources */,
+				3A92A9E81FE8109800F9F921 /* dartCart.png in Resources */,
+				3A92A9EA1FE8118100F9F921 /* dartCartsm.png in Resources */,
 				3A4560CA1FE4227F007C04F5 /* LaunchScreen.storyboard in Resources */,
+				3A92A9EE1FE8144B00F9F921 /* category_list.png in Resources */,
 				3A4560C71FE4227F007C04F5 /* Assets.xcassets in Resources */,
 				3A4560C21FE4227F007C04F5 /* Main.storyboard in Resources */,
 			);
@@ -221,6 +250,7 @@
 				3A4560CD1FE4227F007C04F5 /* main.m in Sources */,
 				3A340E311FE437DF00942A7F /* CategoriesTVC.m in Sources */,
 				3A340E2E1FE437C000942A7F /* ShoppingListTVC.m in Sources */,
+				3A92A9E61FE7F50100F9F921 /* ListsTVCCell.m in Sources */,
 				3A4560C51FE4227F007C04F5 /* DartCart.xcdatamodeld in Sources */,
 				3A379E781FE43ABC00D9E41F /* maestro.m in Sources */,
 			);

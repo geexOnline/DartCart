@@ -75,19 +75,29 @@
     // Create custom view to display section header...
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, tableView.frame.size.width, 18)];
     [label setFont:[UIFont boldSystemFontOfSize:12]];
-    NSString *string = [[[self.frc sections]objectAtIndex:section]name];
-    if ([string isEqualToString:@""])
+    NSString *crossed = [[[self.frc sections]objectAtIndex:section]name];
+    NSString *headingLabel = [[NSString alloc]init];
+    //if ([string isEqualToString:@""])
+    //{
+    //    string = @"<No Category>";
+    //    [label setFont:[UIFont boldSystemFontOfSize:10]];
+    //
+    //}
+    if ([crossed isEqualToString:@"0"])
     {
-        string = @"<No Category>";
-        [label setFont:[UIFont boldSystemFontOfSize:10]];
-        
+        headingLabel = @"Need to Get:";
     }
+else
+{
+    headingLabel = @"Got it:";
+}
+    
     //NSString *string2 =[_items objectAtIndex:section];
     // Section header is in 0th index...
-    [label setText:string];
+    [label setText:headingLabel];
     
     [view addSubview:label];
-    [view setBackgroundColor:[UIColor colorWithRed:166/255.0 green:177/255.0 blue:186/255.0 alpha:1.0]]; //your background color...
+    [view setBackgroundColor:[UIColor colorWithRed:116/255.0 green:205/255.0 blue:203/255.0 alpha:1.0]]; //your background color...
     return view;
 }
 
@@ -98,15 +108,18 @@
     NSLog(@"");
         //NSManagedObjectModel *anItem = [self.list objectAtIndex:indexPath.row];
     cell.textLabel.text = listItem.itemName;
+    cell.detailTextLabel.text = listItem.category;
     if (listItem.crossed)
     {
         [[cell textLabel] setFont:[UIFont fontWithName:@"HelveticaNeue-LightItalic" size:16.5]];
         [[cell textLabel] setTextColor:[UIColor grayColor]];
+        [[cell detailTextLabel] setTextColor:[UIColor grayColor]];
     }
     else
     {
         [[cell textLabel] setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:16.5]];
         [[cell textLabel] setTextColor:[UIColor blueColor]];
+        [[cell detailTextLabel] setTextColor:[UIColor colorWithRed:116/255.0 green:205/255.0 blue:203/255.0 alpha:1]];
     }
     
     return cell;
@@ -133,21 +146,22 @@
     {
         // Delete the row from the data source
         // [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        [context deleteObject:[self.list objectAtIndex:indexPath.row]];
+        ShoppingLists *itemToDelete = [self.frc objectAtIndexPath:indexPath];
+        [context deleteObject:itemToDelete];
         NSError *error = nil;
         if(![context save:&error])
         {
             NSLog(@"%@ %@",error, [error localizedDescription]);
             
         }
-        [self.list removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+        if (![[self frc] performFetch:&error])
+        {
+            NSLog(@"Error! %@",error);
+            abort();
+        }
+        [self.tableView reloadData];
 }
-
+}
 
 /*
 // Override to support rearranging the table view.
@@ -199,6 +213,7 @@
     // Specify criteria for filtering which objects to fetch
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"listName == %@", _relatedList];
     [fetchRequest setPredicate:predicate];
+
     NSSortDescriptor *sort1 =
     [[NSSortDescriptor alloc] initWithKey:@"crossed" ascending:YES];
     NSSortDescriptor *sort2 =
@@ -206,7 +221,7 @@
     NSSortDescriptor *sort3 =
     [[NSSortDescriptor alloc] initWithKey:@"itemName" ascending:YES];
     [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:sort1,sort2,sort3, nil]];
-    _frc = [[NSFetchedResultsController alloc]initWithFetchRequest:fetchRequest managedObjectContext:context sectionNameKeyPath:@"category" cacheName:nil];
+    _frc = [[NSFetchedResultsController alloc]initWithFetchRequest:fetchRequest managedObjectContext:context sectionNameKeyPath:@"crossed" cacheName:nil];
     return _frc;
     
 }
@@ -220,7 +235,12 @@
             NSLog(@"%@ %@",error, [error localizedDescription]);
             
         }
-[self.tableView reloadData];
+        if (![[self frc] performFetch:&error])
+        {
+            NSLog(@"Error! %@",error);
+        
+        }
+    [self.tableView reloadData];
         
     
     

@@ -21,7 +21,20 @@ NSString *EntityProducts = @"Products";
 +(void)testie
 {
     NSLog(@"Your Testie is working!");
-    
+    NSArray *familyNames = [[NSArray alloc] initWithArray:[UIFont familyNames]];
+    NSArray *fontNames;
+    NSInteger indFamily, indFont;
+    for (indFamily=0; indFamily<[familyNames count]; ++indFamily)
+    {
+        NSLog(@"Family name: %@", [familyNames objectAtIndex:indFamily]);
+        fontNames = [[NSArray alloc] initWithArray:
+                     [UIFont fontNamesForFamilyName:
+                      [familyNames objectAtIndex:indFamily]]];
+        for (indFont=0; indFont<[fontNames count]; ++indFont)
+        {
+            NSLog(@"    Font name: %@", [fontNames objectAtIndex:indFont]);
+        }
+    }
 }
 
 +(void) writeOut:(NSString *)entity index:(NSString *)index value:(NSString *)value
@@ -59,6 +72,25 @@ NSString *EntityProducts = @"Products";
     [fetchRequest setPredicate:p];
     ShoppingLists *list = [[context executeFetchRequest:fetchRequest error:nil]mutableCopy];
     NSLog(@"List Fetched: %@ for ListName: %@",list,ListName);
+    int i=0;
+    for (NSManagedObject *deletedList in list)
+    {
+        [context deleteObject:deletedList];
+        i++;
+        NSLog(@"%i Items Deleted!",i);
+        
+    }
+    
+}
++(void) cleanUpMasterLists:(NSString *)itemName
+{
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
+    NSManagedObjectContext *context = appDelegate.persistentContainer.viewContext;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]initWithEntityName:@"ShoppingLists"];
+    NSPredicate *p =[NSPredicate predicateWithFormat:@"itemName == %@",itemName];
+    [fetchRequest setPredicate:p];
+    ShoppingLists *list = [[context executeFetchRequest:fetchRequest error:nil]mutableCopy];
+    NSLog(@"List Fetched: %@ for ListName: %@",list,itemName);
     int i=0;
     for (NSManagedObject *deletedList in list)
     {

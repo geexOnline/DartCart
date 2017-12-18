@@ -12,9 +12,13 @@
 #import "ShoppingListTVC.h"
 #import "MasterListTVC.h"
 #import "ShoppingListsNames+CoreDataClass.h"
+#import "ListsTVCCell.h"
+#import <QuartzCore/QuartzCore.h>
+
 
 @interface ListsTVC ()
 @property (strong) NSMutableArray *lists;
+
 
 @end
 
@@ -34,8 +38,9 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [maestro testie];
-    //[maestro defaultCategoryCheck];
-    
+    [self.tableView setSeparatorColor:[UIColor colorWithRed:116 green:205 blue:203 alpha:1]];
+    //[self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleDoubleLine];
+    //[self.tableView setSeparatorStyle: UITableViewCellSeparatorStyle.SingleLine;
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -82,22 +87,51 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellID = @"listsCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
+    ListsTVCCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
 
     /*NSManagedObjectModel *aList = [self.lists objectAtIndex:indexPath.row];
     [cell.textLabel setText:[NSString stringWithFormat:@"%@",[aList valueForKey:@"listName"]]];
     NSString *rawDate = [aList valueForKey:@"date"];
-    //NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
     //[dateFormat setDateFormat:@"EE, d LLLL yyyy HH:mm:ss Z"];
     //NSTimeZone *zone = [NSTimeZone timeZoneWithName:@"America/New_York"];
     //[dateFormat setTimeZone:zone];
     //NSDate *recordDate = [dateFormat dateFromString:rawDate];
      */
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
+    [dateFormat setDateFormat:@"EE LLL d, yyyy - h:mma"];
     ShoppingListsNames *list = [self.frc objectAtIndexPath:indexPath];
-    [cell.textLabel setText:list.listName];
-    [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@",list.date]];
+    NSManagedObjectContext *moc = appDelegate.persistentContainer.viewContext;
+    NSFetchRequest *fetch = [[NSFetchRequest alloc]init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"ShoppingLists" inManagedObjectContext:moc];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"listName == %@ AND crossed == 0",list.listName];
+    [fetch setEntity:entity];
+    [fetch setPredicate:predicate];
+    NSError *error = nil;
+    NSUInteger results = [moc countForFetchRequest:fetch error:&error];
+    NSLog(@"Per Store Results: %lu",(unsigned long)results);
+
+    cell.lblListName.text = list.listName;
+    cell.lblListDate.text = [dateFormat stringFromDate:list.date];
+    if (results > 0)
+    {
+        cell.lblCount.hidden = NO;
+        cell.lblCount.text = [NSString stringWithFormat:@"%lu",results];
+        
+    }
+    else
+    {
+        cell.lblCount.hidden = YES;
+    }
+    //[cell.textLabel setText:list.listName];
+    //[cell.detailTextLabel setText:[NSString stringWithFormat:@"%@",list.date]];
     //[cell.detailTextLabel setText:[NSString stringWithFormat:@"%@",rawDate]];
-    cell.detailTextLabel.font = [UIFont fontWithName:@"Arial" size: 8];
+    cell.lblListName.font = [UIFont fontWithName:@"Thonburi" size: 20];
+    cell.lblListDate.font = [UIFont fontWithName:@"Avenir Next Condensed" size: 12];
+    [cell.lblListDate setTextColor:[UIColor grayColor]];
+    cell.lblCount.layer.masksToBounds = YES;
+    cell.lblCount.layer.cornerRadius = 10;
+    cell.accessoryType = UITableViewCellStyleValue1;
 
     return cell;
 }
@@ -126,7 +160,16 @@
             NSLog(@"%@ %@",error, [error localizedDescription]);
             
         }
+    
+        if (![[self frc] performFetch:&error])
+        {
+            NSLog(@"Error! %@",error);
+            abort();
+        }
+        [self.tableView reloadData];
+        
     }
+
 //    +(void) cleanUpLists:(NSString *)ListName
         [maestro cleanUpLists:deletedList];
         [self.tableView reloadData];

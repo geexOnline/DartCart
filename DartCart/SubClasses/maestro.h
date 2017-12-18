@@ -27,4 +27,5 @@
 +(void) defaultCategoryCheck;
 +(void) cleanUp;
 +(void) cleanUpLists:(NSString *)ListName;
++(void) cleanUpMasterLists:(NSString *)itemName;
 @end

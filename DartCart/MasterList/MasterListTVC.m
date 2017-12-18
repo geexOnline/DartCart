@@ -104,12 +104,12 @@
         [label setFont:[UIFont boldSystemFontOfSize:10]];
 
     }
-    NSString *string2 =[_items objectAtIndex:section];
+    //NSString *string2 =[_items objectAtIndex:section];
     // Section header is in 0th index... 
     [label setText:string];
     
     [view addSubview:label];
-    [view setBackgroundColor:[UIColor colorWithRed:166/255.0 green:177/255.0 blue:186/255.0 alpha:1.0]]; //your background color...
+    [view setBackgroundColor:[UIColor colorWithRed:116/255.0 green:205/255.0 blue:203/255.0 alpha:1.0]]; //your background color...
     return view;
 }
 
@@ -123,6 +123,7 @@
     */
     Products *product = [self.frc objectAtIndexPath:indexPath];
     cell.textLabel.text = product.itemName;
+    cell.accessoryType = UITableViewCellStyleValue1;
     
     return cell;
 }
@@ -143,20 +144,28 @@
 
 
 // Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [context deleteObject:[self.items objectAtIndex:indexPath.row]];
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        // Delete the row from the data source
+        // [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        Products *itemToDelete = [self.frc objectAtIndexPath:indexPath];
+        NSString *itemDeleted = itemToDelete.itemName;
+        [context deleteObject:itemToDelete];
         NSError *error = nil;
         if(![context save:&error])
         {
             NSLog(@"%@ %@",error, [error localizedDescription]);
             
         }
-        [self.items removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        
-    }else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        if (![[self frc] performFetch:&error])
+        {
+            NSLog(@"Error! %@",error);
+            abort();
+        }
+        [maestro cleanUpMasterLists:itemDeleted];
+        [self.tableView reloadData];
     }
 }
 
@@ -205,11 +214,13 @@
     _frc = [[NSFetchedResultsController alloc]initWithFetchRequest:fetchRequest managedObjectContext:context sectionNameKeyPath:@"category" cacheName:nil];
     return _frc;
 }
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (!_relatedList)
     {
         NSLog(@"No Related List");
+
         
     }
     else
@@ -219,7 +230,7 @@
         NSString *addCategory = itemToAdd.category;
         NSString *addItemName = itemToAdd.itemName;
         NSString *listName = _relatedList;
-        BOOL *crossed = 0;
+            //BOOL *crossed = 0;
         NSLog(@"ItemtoAdd: %@\n",itemToAdd);
         //appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
         //NSManagedObjectContext *newContext = appDelegate.persistentContainer.viewContext;
