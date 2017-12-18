@@ -203,21 +203,7 @@ static NSString *field2 = nil;
         field1 = @"listName";
         field2 = @"date";
     }
-    // Going to move this to a table view selector (if I ever figure it out)
-/*    else if ([pkgType  isEqual: @"ShoppingLists"])
-    {
-        self.lblPageTitle.text = @"Add Item to Your List";
-        self.lblField1.text = @"List";
-        self.lblField2.text = @"Item";
-        self.txtValue1.text = list;
-        self.txtValue1.enabled = NO;
-        
-        entity = @"ShoppingLists";
-        field1 = @"listName";
-        field2 = @"itemName";
-        
-    }
- */
+
     else if ([_packageType  isEqual: @"Category"])
     {
         self.lblPageTitle.text = @"Add a Category";

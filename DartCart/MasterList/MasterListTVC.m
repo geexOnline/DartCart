@@ -135,7 +135,15 @@
     */
     Products *product = [self.frc objectAtIndexPath:indexPath];
     cell.textLabel.text = product.itemName;
+    if (!_relatedList)
+    {
     cell.accessoryType = UITableViewCellStyleValue1;
+    }
+    else
+    {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
     
     return cell;
 }
@@ -207,6 +215,7 @@
                 EditViewController *evc = segue.destinationViewController;
                 evc.packageType = @"Product";
         }
+
  }
 
 #pragma mark -
@@ -231,8 +240,8 @@
 {
     if (!_relatedList)
     {
-        NSLog(@"No Related List");
 
+        NSLog(@"No Related List");
         
     }
     else

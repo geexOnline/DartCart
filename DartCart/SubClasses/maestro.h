@@ -18,13 +18,6 @@
 @property (strong, atomic) NSString *EntityShoppingList;
 @property (strong, atomic) NSString *EntityProducts;
 
-
-
-+(void) testie;
-+(void) writeOut:(NSString *)entity index:(NSString *)index value:(NSString *)value;
-+(NSDate *)getLocalDateTime;
-+(NSMutableArray *)getCategories;
-+(void) defaultCategoryCheck;
 +(void) cleanUp;
 +(void) cleanUpLists:(NSString *)ListName;
 +(void) cleanUpMasterLists:(NSString *)itemName;
