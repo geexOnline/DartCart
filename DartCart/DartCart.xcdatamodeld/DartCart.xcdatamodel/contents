@@ -18,7 +18,8 @@
         </uniquenessConstraints>
     </entity>
     <entity name="ShoppingLists" representedClassName="ShoppingLists" syncable="YES" codeGenerationType="class">
-        <attribute name="crossed" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="crossed" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="itemName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="listName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -29,7 +30,7 @@
     <elements>
         <element name="Categories" positionX="-45" positionY="-9" width="128" height="58"/>
         <element name="Products" positionX="-47" positionY="-108" width="128" height="75"/>
-        <element name="ShoppingLists" positionX="-189" positionY="-9" width="128" height="90"/>
+        <element name="ShoppingLists" positionX="-189" positionY="-9" width="128" height="103"/>
         <element name="ShoppingListsNames" positionX="-198" positionY="-108" width="128" height="75"/>
     </elements>
 </model>

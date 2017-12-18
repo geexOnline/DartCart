@@ -15,6 +15,7 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"ShoppingLists"];
 }
 
+@dynamic category;
 @dynamic crossed;
 @dynamic itemName;
 @dynamic listName;

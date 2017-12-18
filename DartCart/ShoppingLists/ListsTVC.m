@@ -10,6 +10,8 @@
 #import "maestro.h"
 #import "EditViewController.h"
 #import "ShoppingListTVC.h"
+#import "MasterListTVC.h"
+#import "ShoppingListsNames+CoreDataClass.h"
 
 @interface ListsTVC ()
 @property (strong) NSMutableArray *lists;
@@ -17,6 +19,7 @@
 @end
 
 @implementation ListsTVC
+@synthesize frc = _frc;
 
 - (void)viewDidLoad {
     
@@ -37,17 +40,27 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]initWithEntityName:@"ShoppingListsNames"];
+    /*NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]initWithEntityName:@"ShoppingListsNames"];
     self.lists = [[context executeFetchRequest:fetchRequest error:nil]mutableCopy];
     [self.tableView reloadData];
     NSLog(@"viewDidAppear Done: Here's the list: %@",self.lists);
-    if(_lists.count <1 ){
+     */
+    NSError *error = nil;
+    if (![[self frc] performFetch:&error])
+    {
+        NSLog(@"Error! %@",error);
+        abort();
+    }
+
+    if([self.frc.fetchedObjects count] <1 ){
     self.title = @"Start by Adding a List";
     }
     else
     {
     self.title = @"DartCart!";
     }
+    [self.tableView reloadData];
+     
     
 }
 
@@ -59,13 +72,19 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {return 1;}
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {return [self.lists count];}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    id <NSFetchedResultsSectionInfo> secInfo = [[self.frc sections] objectAtIndex:section];
+    return [secInfo numberOfObjects];
+    
+}
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellID = @"listsCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
-    NSManagedObjectModel *aList = [self.lists objectAtIndex:indexPath.row];
+
+    /*NSManagedObjectModel *aList = [self.lists objectAtIndex:indexPath.row];
     [cell.textLabel setText:[NSString stringWithFormat:@"%@",[aList valueForKey:@"listName"]]];
     NSString *rawDate = [aList valueForKey:@"date"];
     //NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
@@ -73,10 +92,13 @@
     //NSTimeZone *zone = [NSTimeZone timeZoneWithName:@"America/New_York"];
     //[dateFormat setTimeZone:zone];
     //NSDate *recordDate = [dateFormat dateFromString:rawDate];
-    [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@",rawDate]];
+     */
+    ShoppingListsNames *list = [self.frc objectAtIndexPath:indexPath];
+    [cell.textLabel setText:list.listName];
+    [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@",list.date]];
+    //[cell.detailTextLabel setText:[NSString stringWithFormat:@"%@",rawDate]];
     cell.detailTextLabel.font = [UIFont fontWithName:@"Arial" size: 8];
 
-    
     return cell;
 }
 
@@ -91,22 +113,24 @@
 
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *deletedList = [[NSString alloc]init];
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
         //[tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        [context deleteObject:[self.lists objectAtIndex:indexPath.row]];
+        ShoppingListsNames *listToDelete = [self.frc objectAtIndexPath:indexPath];
+        deletedList = listToDelete.listName;
+        [context deleteObject:listToDelete];
         NSError *error = nil;
         if(![context save:&error])
         {
             NSLog(@"%@ %@",error, [error localizedDescription]);
             
         }
-        [self.lists removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-            
-    }else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    }
+//    +(void) cleanUpLists:(NSString *)ListName
+        [maestro cleanUpLists:deletedList];
+        [self.tableView reloadData];
+ 
 }
 
 
@@ -142,11 +166,32 @@
     }
     if([[segue identifier] isEqualToString:@"useShoppingList"])
     {
-        NSManagedObjectModel *selectedList = [self.lists objectAtIndex:[[self.tableView indexPathForSelectedRow]row]];
-        EditViewController *evc = segue.destinationViewController;
-        evc.package = selectedList;
+        ShoppingListsNames *selectedList = [self.frc objectAtIndexPath:[self.tableView indexPathForSelectedRow]];
+        NSLog(@"SelectedList = %@\n\n%@",selectedList,selectedList.listName);
+        ShoppingListTVC *slTVC = segue.destinationViewController;
+        slTVC.relatedList = selectedList.listName;
         //evc.packageType = @"List";
     }
+}
+
+#pragma mark -
+#pragma mark Fetched Results Controller
+
+-(NSFetchedResultsController*)frc
+{
+    if(_frc !=nil) {return _frc;}
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"ShoppingListsNames" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSString *sort1Key = @"date";
+    NSString *sort2Key = @"listName";
+    NSSortDescriptor *sort1 =
+    [[NSSortDescriptor alloc] initWithKey:sort1Key ascending:NO];
+    NSSortDescriptor *sort2 =
+    [[NSSortDescriptor alloc] initWithKey:sort2Key ascending:YES];
+    [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:sort1,sort2, nil]];
+    _frc = [[NSFetchedResultsController alloc]initWithFetchRequest:fetchRequest managedObjectContext:context sectionNameKeyPath:nil cacheName:nil];
+    return _frc;
 }
 
 @end

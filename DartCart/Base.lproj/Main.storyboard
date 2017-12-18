@@ -99,7 +99,7 @@
                     <navigationItem key="navigationItem" id="d63-6M-WY9">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="eUk-ve-qWZ">
                             <connections>
-                                <segue destination="92L-WY-pj9" kind="presentation" id="Wqd-gh-PzZ"/>
+                                <segue destination="92L-WY-pj9" kind="show" identifier="addItems" id="Wqd-gh-PzZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -107,6 +107,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDD-4x-lP1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1839" y="-334"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vEe-nc-yU4">
+            <objects>
+                <viewController id="JvA-98-lwP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g4i-rw-GRB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="P2b-uG-1l6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lRR-v4-qfX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3017" y="-669"/>
         </scene>
         <!--Categories-->
         <scene sceneID="XMb-2U-c7O">
@@ -202,7 +217,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFI-b6-Uz6">
-                                <rect key="frame" x="112.5" y="585" width="150" height="32"/>
+                                <rect key="frame" x="112.5" y="536" width="150" height="32"/>
                                 <color key="backgroundColor" red="0.71321702821354305" green="1" blue="0.65574412027295215" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="O4u-ZJ-Oa5"/>
@@ -281,7 +296,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8FY-0T-b4Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1838" y="1104"/>
+            <point key="canvasLocation" x="1871" y="1092"/>
         </scene>
         <!--Shopping List Nav Controller-->
         <scene sceneID="zc0-pF-05b">

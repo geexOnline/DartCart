@@ -10,6 +10,7 @@
 #import "maestro.h"
 #import "EditViewController.h"
 #import "Products+CoreDataClass.h"
+#import "ShoppingLists+CoreDataClass.h"
 
 
 @interface MasterListTVC ()
@@ -27,6 +28,7 @@
     self.title = @"Item Master List";
     appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     context = appDelegate.persistentContainer.viewContext;
+    NSLog(@"Incoming List: %@",_relatedList);
 
 
     
@@ -202,6 +204,45 @@
     [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:sortOnCategory,sortOnItem, nil]];
     _frc = [[NSFetchedResultsController alloc]initWithFetchRequest:fetchRequest managedObjectContext:context sectionNameKeyPath:@"category" cacheName:nil];
     return _frc;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (!_relatedList)
+    {
+        NSLog(@"No Related List");
+        
+    }
+    else
+    {
+        NSLog(@"Related List = %@",_relatedList);
+        Products *itemToAdd = [self.frc objectAtIndexPath:indexPath];
+        NSString *addCategory = itemToAdd.category;
+        NSString *addItemName = itemToAdd.itemName;
+        NSString *listName = _relatedList;
+        BOOL *crossed = 0;
+        NSLog(@"ItemtoAdd: %@\n",itemToAdd);
+        //appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
+        //NSManagedObjectContext *newContext = appDelegate.persistentContainer.viewContext;
+        ShoppingLists *addListItem = [[ShoppingLists alloc]initWithContext:context];
+        
+        //NSLog(@"Added Item Build: %@\n",addListItem);
+        addListItem.crossed = NO;
+        //NSLog(@"Added Item Build: %@\n",addListItem);
+        addListItem.itemName = addItemName;
+        //NSLog(@"Added Item Build: %@\n",addListItem);
+        addListItem.category = addCategory;
+        //NSLog(@"Added Item Build: %@\n",addListItem);
+        addListItem.listName = listName;
+        //NSLog(@"Added Item Build: %@\n",addListItem);
+        NSError *error = nil;
+        if(![context save:&error])
+        {
+            NSLog(@"%@ %@",error, [error localizedDescription]);
+            
+        }
+
+    }
+    
 }
 
 @end

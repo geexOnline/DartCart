@@ -193,7 +193,7 @@ static NSString *field2 = nil;
         self.lblPageTitle.text = @"Add a New Shopping List";
         self.lblField1.text = @"List Name";
         self.lblField2.text = @"Date";
-        NSLog(@"Local Date Time: %@",[maestro getLocalDateTime]);
+        //NSLog(@"Local Date Time: %@",[maestro getLocalDateTime]);
         //NSDate *now = [maestro getLocalDateTime];
         NSDate *now = [NSDate date];
         self.txtValue2.text = [NSString stringWithFormat:@"%@",now];

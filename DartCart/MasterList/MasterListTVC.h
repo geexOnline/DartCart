@@ -16,5 +16,6 @@
     NSManagedObjectContext *context;
 }
 @property(nonatomic, strong) NSFetchedResultsController *frc;
+@property (strong, nonatomic) NSString *relatedList;
 
 @end

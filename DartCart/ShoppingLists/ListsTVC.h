@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
+
 @interface ListsTVC : UITableViewController
 {
     AppDelegate *appDelegate;
     NSManagedObjectContext *context;
-    
 }
-
+@property(nonatomic, strong) NSFetchedResultsController *frc;
 @end

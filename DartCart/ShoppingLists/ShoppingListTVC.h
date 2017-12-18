@@ -18,6 +18,8 @@
 }
 
 @property (strong) NSManagedObjectModel *package;
+@property (strong) NSString *relatedList;
+@property(nonatomic, strong) NSFetchedResultsController *frc;
 
 
 @end

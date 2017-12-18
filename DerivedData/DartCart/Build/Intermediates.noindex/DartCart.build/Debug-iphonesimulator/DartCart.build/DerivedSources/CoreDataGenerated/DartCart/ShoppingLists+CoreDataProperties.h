@@ -16,7 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<ShoppingLists *> *)fetchRequest;
 
-@property (nullable, nonatomic, copy) NSDate *crossed;
+@property (nullable, nonatomic, copy) NSString *category;
+@property (nonatomic) BOOL crossed;
 @property (nullable, nonatomic, copy) NSString *itemName;
 @property (nullable, nonatomic, copy) NSString *listName;
 

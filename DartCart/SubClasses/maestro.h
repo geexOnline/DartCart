@@ -26,4 +26,5 @@
 +(NSMutableArray *)getCategories;
 +(void) defaultCategoryCheck;
 +(void) cleanUp;
++(void) cleanUpLists:(NSString *)ListName;
 @end
